@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- КНОПКА ПЕРЕКЛЮЧЕНИЯ -->
+  <button class="lang-switch" onclick="switchLang()">RU / EN</button>
+
+  <main class="projects-page">
+
+    <header class="projects-hero">
+      <h1 data-ru="Проекты" data-en="Projects">Проекты</h1>
+      <p data-ru="Мои работы" data-en="Here are some of my works.">
+        Мои работы
+      </p>
+      <a href="index.html" class="back-btn">← Back</a>
+    </header>
+
+    <section class="projects-list">
+
+      <!-- Donozon -->
+      <div class="project-card">
+        <img src="images/donozon-dashboard.png" alt="Donozon">
+
+        <div class="project-info">
+          <h2 
+            data-ru="Donozon Content Panel" 
+            data-en="Donozon Content Panel">
+            Donozon Content Panel
+          </h2>
+
+          <p 
+            data-ru="Парсер и панель управления контентом. Позволяет искать Shorts, скачивать и экспортировать данные."
+            data-en="A content parsing tool developed based on a tutorial. Allows searching for Shorts videos, downloading media, and exporting data to CSV/Excel.">
+            Парсер и панель управления контентом.
+          </p>
+
+          <p>
+            <strong data-ru="Стек:" data-en="Tech stack:">Стек:</strong>
+            Python, GUI, CSV, Excel
+          </p>
+        </div>
+      </div>
+
+      <!-- Weather -->
+      <div class="project-card">
+        <img src="images/weather-app.png" alt="Weather">
+
+        <div class="project-info">
+          <h2 
+            data-ru="Погодное приложение" 
+            data-en="Weather App">
+            Погодное приложение
+          </h2>
+
+          <p 
+            data-ru="Приложение для просмотра погоды через API."
+            data-en="A weather application using the OpenWeather API. Displays temperature, weather conditions, humidity and wind speed.">
+            Приложение для погоды
+          </p>
+
+          <p>
+            <strong data-ru="Стек:" data-en="Tech stack:">Стек:</strong>
+            HTML, CSS, JavaScript, API
+          </p>
+        </div>
+      </div>
+
+      <!-- Tickets -->
+      <div class="project-card">
+        <img src="images/ticket-events.png" alt="Tickets">
+
+        <div class="project-info">
+          <h2 
+            data-ru="Система бронирования билетов" 
+            data-en="Ticket Booking System">
+            Система бронирования билетов
+          </h2>
+
+          <p 
+            data-ru="Веб-приложение для выбора событий и бронирования."
+            data-en="A web application for browsing events and booking tickets. Includes seat selection and booking logic.">
+            Веб-приложение
+          </p>
+
+          <p>
+            <strong data-ru="Стек:" data-en="Tech stack:">Стек:</strong>
+            Java, Spring Boot, HTML, CSS, JavaScript
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script>
+    let currentLang = "ru";
+
+    function switchLang() {
+      let elements = document.querySelectorAll("[data-ru]");
+
+      elements.forEach(el => {
+        el.textContent = el.dataset[currentLang === "ru" ? "en" : "ru"];
+      });
+
+      currentLang = currentLang === "ru" ? "en" : "ru";
+    }
+  </script>
+
+</body>
+</html>
