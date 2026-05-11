@@ -10,7 +10,6 @@
 
 <body>
 
-  <!-- КНОПКА ПЕРЕКЛЮЧЕНИЯ -->
   <button class="lang-switch" onclick="switchLang()">RU / EN</button>
 
   <main class="projects-page">
@@ -25,7 +24,6 @@
 
     <section class="projects-list">
 
-      <!-- Donozon -->
       <div class="project-card">
         <img src="images/donozon-dashboard.png" alt="Donozon">
 
@@ -49,7 +47,6 @@
         </div>
       </div>
 
-      <!-- Weather -->
       <div class="project-card">
         <img src="images/weather-app.png" alt="Weather">
 
@@ -73,7 +70,6 @@
         </div>
       </div>
 
-      <!-- Tickets -->
       <div class="project-card">
         <img src="images/ticket-events.png" alt="Tickets">
 
@@ -101,7 +97,6 @@
 
   </main>
 
-  <!-- JS -->
   <script>
     let currentLang = "ru";
 
@@ -115,6 +110,8 @@
       currentLang = currentLang === "ru" ? "en" : "ru";
     }
   </script>
-
+<canvas id = "canvas-matrix"></canvas>
+<canvas id = "canvas-waves"></canvas>
+<script src="script.js"></script>
 </body>
 </html>

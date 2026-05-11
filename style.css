@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #3f005c;
+  background: #08011a;
   color: rgb(236, 92, 255);
 }
 
@@ -302,4 +302,12 @@ html{
 
   border: 3px solid #8b5cf6;
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+#canvas-matrix, #canvas-waves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
